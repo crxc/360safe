@@ -1,0 +1,87 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TvTitleStyle">
+        <item name="android:padding">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#429ED6</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TvPicStyle" parent="android:Widget.Holo.Light.TextView">
+
+        <item name="android:drawableLeft">@mipmap/dialog_title_default_icon</item>
+
+        <item name="android:drawablePadding">10dp</item>
+
+        <item name="android:gravity">center_vertical</item>
+
+        <item name="android:layout_marginLeft">10dp</item>
+
+        <item name="android:layout_marginTop">10dp</item>
+
+        <item name="android:textColor">#838383</item>
+
+        <item name="android:layout_width">wrap_content</item>
+
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="btn_next" parent="android:Widget.Holo.Light.Button">
+
+        <item name="android:id">@id/next</item>
+
+        <item name="android:layout_width">wrap_content</item>
+
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:background">@drawable/btn_ok_selector</item>
+
+        <item name="android:drawableRight">@mipmap/next</item>
+
+        <item name="android:layout_alignParentBottom">true</item>
+
+        <item name="android:layout_alignParentRight">true</item>
+
+        <item name="android:text">下一步</item>
+
+    </style>
+
+    <style name="btn_pre" parent="android:Widget.Holo.Light.Button">
+
+        <item name="android:id">@id/pre</item>
+
+        <item name="android:layout_width">wrap_content</item>
+
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:background">@drawable/btn_ok_selector</item>
+
+        <item name="android:drawableLeft">@mipmap/pre</item>
+
+        <item name="android:layout_alignParentBottom">true</item>
+
+        <item name="android:layout_alignParentLeft">true</item>
+
+        <item name="android:text">上一步</item>
+
+    </style>
+
+    <style name="cb_style">
+        <item name="colorAccent">#000</item>
+    </style>
+
+    <item name="pre" type="id">pre</item>
+    <item name="next" type="id">next</item>
+</resources>

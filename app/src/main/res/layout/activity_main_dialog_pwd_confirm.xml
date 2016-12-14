@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_title"
+        android:gravity="center_vertical"
+        android:text="@string/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/dialog_title_default_icon"
+        android:textSize="18sp"
+        android:drawablePadding="12dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="#E7E7E7"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/edt_pwd"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/inputPwd"
+        android:textColor="#5000"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"/>
+    <Button
+        android:id="@+id/btn_yes"
+        android:layout_below="@id/edt_pwd"
+        android:text="@string/yes"
+        app:layout_widthPercent="50%"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_no"
+        android:layout_below="@id/edt_pwd"
+        android:layout_toEndOf="@id/btn_yes"
+        android:text="@string/no"
+        app:layout_widthPercent="50%"
+        android:layout_height="wrap_content" />
+</android.support.percent.PercentRelativeLayout>

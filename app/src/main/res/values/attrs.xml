@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingItemView">
+        <attr name="text" format="string"/>
+        <attr name="visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+        <attr name="backImage" format="enum">
+            <enum name="first" value="0"/>
+            <enum name="middle" value="1"/>
+            <enum name="last" value="2"/>
+        </attr>
+
+    </declare-styleable>
+</resources>
