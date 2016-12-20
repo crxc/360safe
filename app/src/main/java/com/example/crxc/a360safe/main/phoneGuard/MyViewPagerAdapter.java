@@ -1,37 +1,82 @@
 package com.example.crxc.a360safe.main.phoneGuard;
 
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.example.crxc.a360safe.data.DataRepository;
 
 /**
  * Created by crxc on 2016/12/12.
  */
 
 class MyViewPagerAdapter extends FragmentPagerAdapter {
+
+    private DataRepository mDataRepository;
+
     MyViewPagerAdapter(FragmentManager fm) {
         super(fm);
+        mDataRepository = DataRepository.getInstance();
     }
 
     @Override
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new PhoneGuardFirstFragment_();
+                return getFirstFragment();
             case 1:
-                return new PhoneGuardSecondFragment_();
+                return getSecondFragment();
             case 2:
-                return new PhoneGuardThirdlyFragment_();
+                return getThirdlyFragment();
             case 3:
-                return new PhoneGuardFourthlyFragment_();
+                return getFourthlyFragment();
             case 4:
-                return new PhoneGuardFifthFragment_();
+                return getFifthFragment();
 
             default:
-                return new PhoneGuardFirstFragment_();
+                return getFirstFragment();
         }
     }
+
+    @NonNull
+    private Fragment getFirstFragment() {
+
+        PhoneGuardFirstFragment_ firstFragment = new PhoneGuardFirstFragment_();
+        PhoneGuardFirstPresenter firstPresenter = new PhoneGuardFirstPresenter(firstFragment, mDataRepository);
+        return firstFragment;
+    }
+
+    @NonNull
+    private Fragment getSecondFragment() {
+        PhoneGuardSecondFragment_ secondFragment = new PhoneGuardSecondFragment_();
+        PhoneGuardSecondPresenter secondPresenter = new PhoneGuardSecondPresenter(secondFragment, mDataRepository);
+        return secondFragment;
+    }
+
+    @NonNull
+    private Fragment getThirdlyFragment() {
+        PhoneGuardThirdlyFragment_ thirdlyFragment = new PhoneGuardThirdlyFragment_();
+        PhoneGuardThirdlyPresenter thirdlyPresenter = new PhoneGuardThirdlyPresenter(thirdlyFragment, mDataRepository);
+        return thirdlyFragment;
+    }
+
+    @NonNull
+    private Fragment getFourthlyFragment() {
+        PhoneGuardFourthlyFragment_ fourthlyFragment = new PhoneGuardFourthlyFragment_();
+        PhoneGuardFourthlyPresenter fourthlyPresenter = new PhoneGuardFourthlyPresenter(fourthlyFragment, mDataRepository);
+        return fourthlyFragment;
+    }
+
+    @NonNull
+    private Fragment getFifthFragment() {
+        PhoneGuardFifthFragment_ fifthFragment = new PhoneGuardFifthFragment_();
+        PhoneGuardFifthPresenter fifthPresenter = new PhoneGuardFifthPresenter(fifthFragment, mDataRepository);
+        return fifthFragment;
+    }
+
+
+
 
     @Override
     public int getCount() {

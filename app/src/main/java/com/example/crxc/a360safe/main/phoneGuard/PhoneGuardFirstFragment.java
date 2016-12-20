@@ -15,9 +15,15 @@ import static com.example.crxc.a360safe.main.phoneGuard.PhoneGuardActivity.sPage
  * Created by crxc on 2016/12/12.
  */
 @EFragment(R.layout.fragment_phone_guard_first)
-public class PhoneGuardFirstFragment extends PhoneGuardBaseFragment {
+public class PhoneGuardFirstFragment extends PhoneGuardBaseFragment implements PhoneGuardFirstContract.View{
+    PhoneGuardFirstContract.Presenter mPresenter;
     @Click
     void next(){
         super.next();
+    }
+
+    @Override
+    public void setPresenter(PhoneGuardFirstContract.Presenter presenter) {
+        mPresenter=presenter;
     }
 }

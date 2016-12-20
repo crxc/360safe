@@ -27,6 +27,7 @@
         android:textSize="17sp" />
 
     <EditText
+        android:id="@+id/edt_phone"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#52ADE7"/>
     <TextView
+        android:id="@+id/tv_select"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="请选择安全号码"

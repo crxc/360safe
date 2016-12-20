@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 
 import com.example.crxc.a360safe.data.DataSource;
+import com.example.crxc.a360safe.main.HarassIntercept.HarassInterceptActivity_;
 import com.example.crxc.a360safe.main.phoneGuard.PhoneGuardActivity_;
 import com.example.crxc.a360safe.setting.SettingActivity_;
 import com.example.crxc.a360safe.util.L;
@@ -116,6 +117,9 @@ import rx.schedulers.Schedulers;
                     } else {
                         mView.showPwdConfirmDialog();
                     }
+                    break;
+                case 1:
+                    goTo(HarassInterceptActivity_.class);
                     break;
                 default:
                     goTo(PhoneGuardActivity_.class);

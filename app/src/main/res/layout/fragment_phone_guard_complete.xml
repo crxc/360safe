@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TvTitleStyle"
+        android:text="手机防盗"/>
+
+    <TextView
+        style="@style/middleTextView"
+        android:text="安全号码"/>
+
+    <TextView
+        android:id="@+id/tv_phoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tv_title"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="12345"
+        android:textSize="17sp"/>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/cut_off_rule"
+        android:layout_below="@id/tv_phoneNum"/>
+
+    <TextView
+        android:id="@+id/tv_defend"
+        style="@style/middleTextView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/line1"
+        android:drawableEnd="@drawable/lock_selector"
+        android:gravity="center_vertical"
+        android:text="防盗保护是否开启"
+        />
+
+    <View
+        android:id="@+id/line2"
+        style="@style/cut_off_rule"
+        android:layout_below="@id/tv_defend"/>
+
+    <TextView
+        android:id="@+id/tv_reset"
+        style="@style/middleTextView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/line2"
+        android:gravity="center_vertical"
+        android:text="重新进入设置向导界面"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_introduce"
+        style="@style/middleTextView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tv_reset"
+        android:background="#5000"
+        android:gravity="center_vertical"
+        android:text="功能介绍"
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/tv_drawable"
+        android:layout_below="@id/tv_introduce"
+        android:text="远程销毁数据:#*wipedata*#"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/tv_drawable"
+        android:layout_below="@id/tv1"
+        android:text="远程锁屏:#*lockscreen*#"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        style="@style/tv_drawable"
+        android:layout_below="@id/tv2"
+        android:text="播放报警音乐:#*music*#"/>
+
+    <TextView
+        android:id="@+id/tv4"
+        style="@style/tv_drawable"
+        android:layout_below="@id/tv3"
+        android:text="GPS追踪:#*location*#"/>
+</android.support.percent.PercentRelativeLayout>

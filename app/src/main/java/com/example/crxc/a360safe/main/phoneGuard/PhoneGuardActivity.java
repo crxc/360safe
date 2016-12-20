@@ -1,5 +1,6 @@
 package com.example.crxc.a360safe.main.phoneGuard;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -14,9 +15,9 @@ import org.androidannotations.annotations.ViewById;
  */
 @EActivity(R.layout.activity_phone_guard)
 public class PhoneGuardActivity extends AppCompatActivity {
-    static ViewPager sPager;
+    static MyViewPager sPager;
     @ViewById
-    ViewPager pager;
+    MyViewPager pager;
     @AfterViews
     void afterViews(){
         initViewPager();
@@ -25,5 +26,16 @@ public class PhoneGuardActivity extends AppCompatActivity {
     private void initViewPager() {
         pager.setAdapter(new MyViewPagerAdapter(getSupportFragmentManager()));
         sPager=pager;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        sPager=null;
     }
 }

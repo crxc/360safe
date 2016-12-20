@@ -13,4 +13,6 @@
     <string name="yes">确认</string>
     <string name="no">取消</string>
     <string name="confirm">验证密码</string>
+    <string name="sample_device_admin">大河向东流</string>
+    <string name="sample_device_admin_description">一寸光阴一寸金</string>
 </resources>

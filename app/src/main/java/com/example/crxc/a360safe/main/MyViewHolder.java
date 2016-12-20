@@ -26,4 +26,7 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
         }
         return view1;
     }
+    public View getV() {
+        return v;
+    }
 }

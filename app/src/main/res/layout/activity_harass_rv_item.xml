@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_phone"
+        android:text="1234"
+        android:textColor="#000"
+        style="@style/middleTextView"/>
+    <TextView
+        android:layout_below="@id/tv_phone"
+        android:text="电话拦截"
+        style="@style/middleTextView"
+        android:id="@+id/tv_type"
+        android:textColor="#5000"
+        />
+    <ImageView
+        android:id="@+id/iv_remove"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_delete_selector"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"/>
+</RelativeLayout>

@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.crxc.a360safe.R;
 import com.example.crxc.a360safe.main.phoneGuard.PhoneGuardActivity_;
+import com.example.crxc.a360safe.main.phoneGuard.PhoneGuardCompleteActivity;
+import com.example.crxc.a360safe.main.phoneGuard.PhoneGuardCompleteActivity_;
 import com.example.crxc.a360safe.setting.SettingActivity_;
 import com.example.crxc.a360safe.util.T;
 
@@ -150,7 +152,7 @@ public class MainFragment extends Fragment implements MainContract.View {
             public void onClick(View v) {
                 String pwd = edtPwd.getText().toString();
                 if(mPresenter.confirmPwd(pwd)){
-                    Intent intent = new Intent(getActivity(), PhoneGuardActivity_.class);
+                    Intent intent = new Intent(getActivity(), PhoneGuardCompleteActivity_.class);
                     startActivity(intent);
                     alertDialog.dismiss();
                 }else {

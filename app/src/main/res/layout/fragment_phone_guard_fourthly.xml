@@ -27,6 +27,7 @@
         android:textSize="17sp" />
 
     <TextView
+        android:id="@+id/tv_activate"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="点击取消/激活设备管理员"
